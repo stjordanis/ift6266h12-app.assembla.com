@@ -1,64 +1,99 @@
 
 .. _deepchallenge_en:
 
-Le défi d'entraîner des réseaux de neurones profonds
-====================================================
+The challenges of training deep neural networks
+===============================================
 
-Ceci est un résumé de la section 4.2 de
+This is a summary of section 4.2 of 
 `Learning Deep Architectures for AI <http://www.iro.umontreal.ca/%7Elisa/publications2/index.php/publications/show/239>`_.
 
-* Plusieurs résultats expérimentaux confirment que l'entraînement de réseaux de neurones (supervisés, initialisation aléatoire)
-  est plus difficile quand ils sont profonds (3, 4 ou 5 couches cachées) que pas profonds (1 ou 2 couche cachée).
-  Voir `Why Does Unsupervised Pre-training Help Deep Learning? <http://www.iro.umontreal.ca/~lisa/publications2/index.php/publications/show/438>`_.
-  L'erreur de généralisation est toujours pire, mais l'erreur d'apprentissage peut être pire ou meilleure.
-  Cela explique sans doute l'absence des architectures profondes dans la littérature scientifique avant 2006
-  (sauf pour les réseaux à convolution).
+* Several experimental results show that training neural networks
+  (supervised training from random initialization) is more difficult when 
+  the network is deep (3, 4 or 5 layers) compared to shallow (1 or 2 layers).
+  See `Why Does Unsupervised Pre-training Help Deep Learning? <http://www.iro.umontreal.ca/~lisa/publications2/index.php/publications/show/438>`_.
+  In this regime, the generalization error is always worse for deep models
+  compared to shallow ones (not the same can be said about training error). 
+  This could very well explain the absence of scientific literature on 
+  deep architectures before 2006 (with the exception of convolutional
+  networks).
 
-* Explications proposées:
+* Proposed explications:
 
-  * L'entraînement est coïncé dans des minima locaux, des plateaux, (ou bien sortir de l'apparent minimum
-    nécessiterait de passer par des zones de courbure trop élevée, où il faudrait un pas de gradient minuscule
-    pendant très longtemps pour en sortir).
-  * Plus le réseau est profond, plus le degré de non-linéarité du réseau augmente, ce qui augmenterait les
-    chances de trouver ces obstacles à l'optimisation.
-  * On peut plus facilement optimiser les couches près de la sortie, donc les couches inférieures restent
-    avec des transformations pas très utiles de l'entrée; le gradient se propage 'mal' en descendant les
-    couches, peut-être trop diffusé pour être utile pour guider l'apprentissage des couches inférieures.
-    Cela est confirmé par le succès des algorithmes comme celui de Weston et al (ICML 2008) qui 
-    guident une ou plusieurs couches intermédiaires par un algorithme d'apprentissage non-supervisé.
-    L'hypothèse de diffusion du gradient est cohérente avec l'observation qu'il est possible d'entraîner
-    avec succès des réseaux *à convolution* profonds.
+  * The learning gets stuck into local minima or in a plateau (where due to low
+    curvature the gradients become extremely small; because the weights do
+    not change that much, in this case, it might seem like the model had
+    already reached a local minima)
+  * Every layer of a deep network means an extra layer of nonlinearities
+    which increases the chances of the optimization process to be even more difficult
+  * In a deep network, one could easily be just learning the top layer, while the 
+    lower layers remain random transformations that do not capture much of the input.
+    This is due to the fact that by the time the gradients reach the lower
+    layers they are too diluted to be able to guide the learning process.
+    This view is confirmed by the success of algorithms like the one
+    proposed by Weston et al. (ICML 2008) which uses additional error signal 
+    from solving some unsupervised tasks for some or all of the intermediate
+    layers. This hypothesis of diluted gradients is also coherent with the
+    observation that one can train successfully a convolutional deep
+    network.
 
-* L'avantage pour les réseaux profonds de faire un pré-entraînement non-supervisé est clair. Quelles en sont les raisons?
-  C'est l'objet principal de `Why Does Unsupervised Pre-training Help Deep Learning? <http://www.iro.umontreal.ca/~lisa/publications2/index.php/publications/show/438>`_
-  et aussi de la section 4.2 de Learning Deep Architectures for AI.
-  En voici les explications proposées et les conclusions expérimentales principales:
+* While it is clear that pre-training deep networks (using some unsupervised
+  training procedure) helps, we still have to address the question of why it 
+  works? This has been the focus of the paper 
+  `Why Does Unsupervised Pre-training Help Deep Learning? <http://www.iro.umontreal.ca/~lisa/publications2/index.php/publications/show/438>`_
+  and of section 4.2 of Learning Deep Architectures for AI.  The main
+  proposed reasons are: 
 
-  * L'entraînement non-supervisé utilisé est local à chaque couche (pas besoin d'une optimisation qui coordonne toutes les couches).
-    Ainsi on remarque qu'une machine de Boltzmann profonde et un auto-encodeur profond ne fonctionne pas bien non plus si ils ne
-    sont pas pré-entraînés avec des RBMs (apprentissage local à chaque couche).
-  * Le pré-entraînement non-supervisé se comporte comme un régulariseur, qui favorise les poids des couches inférieures qui
-    sont cohérentes avec un bon modèle de la distribution des entrées, :math:`P(x)`. Il peut nuire si on a pas assez d'unités
-    cachées. L'a priori exploité est que les transformations des entrées qui sont bonnes pour :math:`P(x)` sont proches
-    de transformations qui sont bonnes pour :math:`P(y|x)`. Cet a priori est similaire à celui utilisé en apprentissage
-    semi-supervisé (d'un lien entre :math:`P(y|x)` et :math:`P(x)` vues comme des fonctions de :math:`x`).
-  * Il semble que le pré-entraînement non-supervisé initialise l'apprentissage supervisé dans une *bonne région* de l'espace
-    des paramètres, à partir de laquelle une descente locale trouve une meilleure solution que celles trouvées à partir d'initialisation
-    aléatoire. Les régions explorées pendant l'apprentissage supervisé sont très différentes selon que l'on initialise aléatoirement
-    ou par pré-entraînement non-supervisé.
-  * Un pré-entraînement supervisé aide mais pas autant qu'un pré-entraînement non-supervisé, peut-être parce qu'il est trop vorace
-    (élimine des projections qui seront seulement utile dans le contexte d'une architecture plus profonde) et qu'il n'exploite pas
-    l'a priori du pré-entraînement non-supervisé.
-  * Contrairement aux régulariseurs habituels, l'effet du pré-entraînement non-supervisé ne disparaît pas quand le nombre
-    d'exemples devient grand, à cause de son lien avec l'optimisation non-convexe (même avec beaucoup d'exemples, l'apprentissage
-    avec initialisation aléatoire reste dans une région moins intéressante, minimum local).
-  * On a pas un problème d'optimisation au sens habituel du terme parce qu'on peut réduire l'erreur d'apprentissage
-    (et même l'amener à 0 avec suffisamment d'unités cachées dans les couches de sortie) en optimisant bien les dernières
-    couches, mais pour bien généraliser, il faut aussi que les couches inférieures soient bien entraînées (à capter
-    des caractéristiques pertinentes des entrées).
-  * Il faut plus d'unités cachées quand on utilise le pré-entraînement non-supervisé, **peut-être** parce que la plupart
-    des unités cachées apprises par entraînement non-supervisé apprennent des fonctions qui ne sont pas très pertinentes
-    à la classification, alors que certaines sont très utiles (plus utiles que celles obtenues par initialisation aléatoires).
+  * The unsupervised pre-training procedure is applied locally at each layer and
+    does not have to deal with the difficulties of learning deep models.
+    Note that even training Deep Boltzmann Machines or a Deep Auto-Encoders is
+    difficult and usually requires layer-wise pre-training.
+
+  * Unsupervised pre-training behaves like a regularizer, pushing the lower layers
+    towards modelling the distribution of the input, :math:`P(x)`.
+    The semi-supervised hypothesis says that learning aspects of 
+    :math:`P(x)` can improve models of the conditional distribution 
+    of the target given the input,
+    :math:`P(y|x)`, because transformations useful for :math:`P(x)` 
+    are useful or closely related to those needed for :math:`P(y|x)`, 
+    i.e. the two distribution share *something*. Note that, if there are not
+    sufficiently many hidden units, the regularization can harm by wasting 
+    resources on modeling aspects of :math:`P(x)` which are not helpful for
+    :math:`P(y|x)`.
+
+  * It seems that the weights obtained through pre-training lie in a 
+    *good region* of the parameter space, from where one reaches better 
+    local minima through supervised training, compared to random
+    initialization. The learning trajectory (in the parameter space) also seems
+    quite different if the model has been pre-trained or randomly
+    initialised. 
+
+  * A supervised pre-training procedure is worse then an unsupervised one.
+    A reason might be that supervised pre-training is to
+    greedy, eliminating projections of the data that are not helpful 
+    for the local cost, but are helpful for the global cost of the deep
+    model. This might not happen in the unsupervised case, because when modeling
+    the input locally, we model all its aspects, not only those
+    helpful for some local cost. 
+
+  * Unlike other regularizers, the unsupervised pre-training still has an
+    effect when the number of training examples grows to be very large, due 
+    to its link with non-convex optimization (even with a lot of examples,
+    starting from a random initialization the reachable local minima are
+    still worse then those reachable from the pre-trained model).
+
+  * One does not deal with an optimization problem in the usual sense
+    because the training error can be reduced by optimizing only 
+    the last layer (and it can even reach 0 if this last layer is
+    sufficiently large). However, in order to improve the generalize error
+    one needs to be able to train  the lower layers as well. 
+    They need to capture all the relevant variations and characteristics of 
+    the input.
+
+  * One **might** need more hidden units when using unsupervised pre-training
+    **because** most of them are used to learn features which while they are useful to
+    reconstruct the input, they are not useful for the discriminative task 
+    of classification. Nonetheless a subset of these features are helpful
+    for classification, and much more so, then those obtained by random initialization.
 
 
 
