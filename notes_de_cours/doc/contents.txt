@@ -9,7 +9,7 @@ Contenu
 .. toctree::
    :maxdepth: 2
 
-   plan
+   plan_fr
    mlintro_fr
    deepintro_fr
    gradient_fr
@@ -30,7 +30,7 @@ Contents
 .. toctree::
    :maxdepth: 2
 
-   plan
+   plan_en
    mlintro_en
    deepintro_en
    gradient_en
