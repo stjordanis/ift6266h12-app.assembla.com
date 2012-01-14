@@ -305,7 +305,7 @@ where :math:`\omega_i` is the :math:`i^{th}` row of :math:`A` excluding
 the :math:`i^{th}` element (the diagonal of :math:`A`
 is 0 in this model). Thus, we see the link with networks of neurons.
 
-.. _rbm:
+.. _rbm_en:
 
 Restricted Boltzmann Machines
 -----------------------------
@@ -482,7 +482,7 @@ that resemble the training data (and in terms of the likelihood
 :math:`\log P(v)`) than CD-k, and is less sensitive to the initialization
 of the Gibbs chain.
 
-.. _dbn:
+.. _dbn_en:
 
 Stacked RBMs and DBNs
 =====================
