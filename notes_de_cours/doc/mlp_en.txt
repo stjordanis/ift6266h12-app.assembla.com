@@ -173,7 +173,7 @@ Logistic regression is a special case of the MLP with no hidden layer
 (sigmoid output) or negative log-likelihood (softmax output) loss.
 It corresponds to a probabilistic linear classifier and the
 training criterion is convex in terms of the parameters
-(which garantees that there is only one minimum, which is global).
+(which guarantees that there is only one minimum, which is global).
 
 .. _trainmlp_en:
 
@@ -214,7 +214,7 @@ choices which render the Hessian matrix
 :math:`\frac{\partial^2 C}{\partial \theta_i \partial \theta_j}`
 well conditioned. The second derivative in a certain direction
 indicates he curvature of the cost function in that direction.
-The larger the cuvature (as in narrow valleys), the smaller our
+The larger the curvature (as in narrow valleys), the smaller our
 updates must be in order to avoid increasing the error. More
 precisely, the optimal step size for a gradient step is 1 over
 the curvature. This can be seen by a simple Taylor expansion of
@@ -246,8 +246,8 @@ smallest eigenvalue).
    was the most common choice before 2006, with the exception of convolutional
    neural networks (which can have 5 or 6 hidden layers, for example).
    Sometimes one obtains much better results with two hidden layers. *In fact,
-   we obtain a much better generalization error with even more layesr*, but a
-   random initailization does not work well with more than two hidden layes
+   we obtain a much better generalization error with even more layers*, but a
+   random initialization does not work well with more than two hidden layers
    (but see the work since 2006 on greedy unsupervised initialization for deep
    architectures).
 
@@ -366,7 +366,7 @@ When the number of examples (and thus, of parameters) is very small,
 especially for regression, second order methods (often the **conjugate
 gradient** method) allow for much faster convergence. These methods
 are *batch* methods (updating parameters only after calculating the error
-and gradient on all examples). These tecniques are generally easier to use
+and gradient on all examples). These techniques are generally easier to use
 than stochastic gradient descent (there are less hyperparameters, or it is
 less necessary to modify them from the default values), but the
 generalization is often worse because of the ease with which such methods
@@ -401,7 +401,7 @@ In order to achieve this objective, it can be argued that the initial
 weights should be drawn uniformly from the interval
 :math:`[-\sqrt{6/(n_i + n_o)}, \sqrt{6/(n_i+n_o)}]`, where :math:`n_i`
 is the *fan-in*, i.e., the number of inputs to a neuron (the number
-of neuons in the previous layer), and :math:`n_o` is the *fan-out*,
+of neurons in the previous layer), and :math:`n_o` is the *fan-out*,
 i.e., the number of neurons in the following layer. This supposes
 that the inputs are approximately uniformly distributed in the 
 interval (-1,1) (note that the outputs of tanh hidden units fall in the
@@ -452,7 +452,7 @@ to find this minimum (obviously in an approximate fashion):
    in the validation set). When there are many hidden layers, choosing the
    same number of hidden units per layer seems to work well. The price paid
    in longer computation time for a larger number of hidden units (because
-   of the increased number of parametes) is generally offset by early
+   of the increased number of parameters) is generally offset by early
    stopping. By contrast, when the number of hidden units is too small, the
    effect on the generalization error and the training error can be much
    larger. We generally choose the size of networks empirically, bearing in
@@ -469,7 +469,7 @@ to find this minimum (obviously in an approximate fashion):
      \lambda \sum_i \theta_i^2
 
    to the cost function. This is known as L2 regularization, since it
-   inimizes the L2 norm of the parameters. Sometimes this is applied
+   minimizes the L2 norm of the parameters. Sometimes this is applied
    only to the **weights** and not to biases.
 
    As in the previous case, we must run several leaning experiments and choose

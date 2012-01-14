@@ -305,7 +305,7 @@ where :math:`\omega_i` is the :math:`i^{th}` row of :math:`A` excluding
 the :math:`i^{th}` element (the diagonal of :math:`A`
 is 0 in this model). Thus, we see the link with networks of neurons.
 
-.. _rbm:
+.. _rbm_en:
 
 Restricted Boltzmann Machines
 -----------------------------
@@ -482,7 +482,7 @@ that resemble the training data (and in terms of the likelihood
 :math:`\log P(v)`) than CD-k, and is less sensitive to the initialization
 of the Gibbs chain.
 
-.. _dbn:
+.. _dbn_en:
 
 Stacked RBMs and DBNs
 =====================
@@ -548,7 +548,7 @@ between :math:`W` and :math:`W'`. The last pair of layers of the DBN is an RBM w
 is odd or even.
 Note that in this equivalence, the DBN has layer sizes that alternate
 (number of visible units of the RBM, number of hidden units of the RBM,
-number of visibles, etc.)
+number of visible units, etc.)
 
 In fact we can continue the unfolding of an RBM infinitely and obtain
 an infinite directed network with shared weights, equivalently.
@@ -607,7 +607,7 @@ still an isolated RBM, but it is no longer exact with the DBN.
 We saw that this is an approximation in the previous section because the
 marginal :math:`P(h)` (of the DBN) differs from the marginal :math:`Q(h)`
 (of the bottom RBM), after modifying the upper weights so that they are
-no longer the tranpose of the bottom weights, and thus :math:`P(h|x)`
+no longer the transpose of the bottom weights, and thus :math:`P(h|x)`
 differs from :math:`Q(h|x)`.
 
 Deep Boltzmann Machines

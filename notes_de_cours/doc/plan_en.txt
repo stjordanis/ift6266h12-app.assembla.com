@@ -1,0 +1,189 @@
+
+=======================
+IFT6266: Course Outline
+=======================
+
+The following table contains a summary of each class of the course (click on
+the date for more details for each entry):
+
+=====================  ===================================  =========================================================================================================================================
+Date                   Subject                              To read
+=====================  ===================================  =========================================================================================================================================
+`April 2nd`_           Exam
+`March 29th`_          Review session
+`March 26th`_          Convolutional networks               `Neocognitron <http://www.scholarpedia.org/article/Neocognitron>`_ article.
+ 
+                                                            `LeNet <http://yann.lecun.com/exdb/publis/pdf/lecun-89e.pdf>`_ article.
+
+                                                            `Convolutional networks tutorial <http://deeplearning.net/tutorial/lenet.html>`_.
+`March 22nd`_          Gradient propagation for deep nets.  final part of `Yoshua Bengio's presentation <http://www.iro.umontreal.ca/~bengioy/ift6266/UofA_27_05_2010.pdf>`_.
+                       DAE vs AE                            :ref:`dae_en`.
+`March 19th`_          Challenges for deep networks         :ref:`deepchallenge_en`.
+`March 15th`_          Pre-training                         `Yoshua Bengio's presentation <http://www.iro.umontreal.ca/~bengioy/ift6266/UofA_27_05_2010.pdf>`_.
+`March 12nd`_          Pre-training                         `Dumitru Erhan presentation <http://www.iro.umontreal.ca/~bengioy/ift6266/dumitru_erhan.pdf>`_.
+`March 1st`_           DBMs                                 :ref:`dbm_en`.
+`February 20th+23rd`_  DBNs                                 :ref:`dbn_en`.
+`February 13rd+16th`_  RBMs                                 :ref:`rbm_en`.
+`February 6th+9th`_    Probabilistic models                 Probabilistic models :ref:`deepgm_en`.
+`February 2nd`_        Probabilistic models                 Introduction to :ref:`deepgm_en`.
+                       Launching jobs 
+                                                            `Jobman <http://www.assembla.com/wiki/show/ift6266h11/Jobman_au_DIRO>`_.
+`January 30th`_        Probabilistic models                 Introduction to :ref:`deepgm_en`.
+`January 26th`_        Auto-encoders,                       Section 4.6 de `Learning Deep Architectures for AI <http://www.iro.umontreal.ca/%7Elisa/publications2/index.php/publications/show/239>`_.
+                       DAE                                  `Denoising Auto-Encoders <http://www.iro.umontreal.ca/~lisa/publications2/index.php/publications/show/217>`_
+`January 23rd`_        python, numpy, Theano                Documentation on `python <http://www.python.org/>`_,
+                                                            `numpy <http://numpy.scipy.org/>`_, et `Theano <http://www.iro.umontreal.ca/~lisa/deep/theanodoc/>`_.
+                       Logistical regression                `Logistic regression <http://deeplearning.net/tutorial/logreg.html>`_ tutorial.
+                                                            Notes on :ref:`training MLPs <trainmlp_en>`.
+`January 19th`_        Neural networks                      `Efficient Backprop <http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf>`_. 
+                                                            `Introduction to the Deep Learning Tutorials <http://deeplearning.net/tutorial/intro.html>`_.
+                                                            The `Getting Started <http://deeplearning.net/tutorial/gettingstarted.html>`_ tutorial.
+`January 16th`_        Computing gradients                  Notes on :ref:`computing gradients <flowgraph_en>`.
+`January 12th`_        Introduction to deep networks        Introduction to :ref:`deep networks <deepintro_en>`,
+                                                            Sec. 1 of `Learning Deep Architectures for AI <http://www.iro.umontreal.ca/%7Elisa/publications2/index.php/publications/show/239>`_.
+                                                            Notes on :ref:`gradient based learning <gradient_en>`.
+`January 9th`_         Introduction to deep networks        Introduction to :ref:`deep networks <deepintro_en>`,
+                                                            Sec. 1 of `Learning Deep Architectures for AI <http://www.iro.umontreal.ca/%7Elisa/publications2/index.php/publications/show/239>`_.
+                                
+`January 5th`_         Introtuction to this class           `course outline <http://cours.iro.umontreal.ca/file.php/507/plan_H11.pdf>`_ .
+
+                       Introduction to Machine Learning     `slides <http://www.iro.umontreal.ca/~pift6266/H10/intro_diapos.pdf>`_ .
+                                                            Introduction to :ref:`Machine Learning <mlintro_en>`,
+                                                            Sec. 1 and 2 of `Scaling Learning Algorithms towards AI <http://www.iro.umontreal.ca/%7Elisa/publications2/index.php/publications/show/4>`_.
+
+=====================  ===================================  =========================================================================================================================================
+
+April 2nd
+---------
+
+* Open book theoretical exam
+
+March 29th
+----------
+
+* Review session before the exam
+
+March 26th
+----------
+
+* Convolutional neural networks
+   * `Neocognitron <http://www.scholarpedia.org/article/Neocognitron>`_ 
+   * `LeNet <http://yann.lecun.com/exdb/publis/pdf/lecun-89e.pdf>`_
+   * `Convolutional neural networks tutorial <http://deeplearning.net/tutorial/lenet.html>`_
+
+March 22nd
+----------
+
+* Gradient propagation for deep neural networks: `Yoshua Bengio's presentation, May 2010 <http://www.iro.umontreal.ca/~bengioy/ift6266/UofA_27_05_2010.pdf>`_.
+* :ref:`dae_en`.
+
+March 19th
+----------
+
+* Understanding the effects of non-supervised pre-training: `Yoshua Bengio's presentation, May 2010 <http://www.iro.umontreal.ca/~bengioy/ift6266/UofA_27_05_2010.pdf>`_.
+* :ref:`deepchallenge_en`.
+
+March 15th
+----------
+
+* Understanding the effects of non-supervised pre-training: `Yoshua Bengio's presentation, May 2010 <http://www.iro.umontreal.ca/~bengioy/ift6266/UofA_27_05_2010.pdf>`_.
+
+March 12nd
+----------
+
+* Understanding the effects of non-supervised pre-training: `Dumitru Erhan's presentation, March 2010 <http://www.iro.umontreal.ca/~bengioy/ift6266/dumitru_erhan.pdf>`_. 
+
+March 1st
+---------
+
+* :ref:`dbm_en`.
+
+February 20th+23rd
+------------------
+
+*  :ref:`dbn_en`.
+
+February 13rd+16th
+------------------
+
+*  :ref:`rbm_en`.
+
+February 6th+9th
+----------------
+
+*  More of :ref:`deepgm_en`.
+
+February 2nd
+------------
+
+*  More on introduction to :ref:`deepgm_en`.
+
+January 30th
+------------
+
+*  Introduction to :ref:`deepgm_en`.
+
+January 26th
+------------
+
+* On training neural networks:
+
+  * Controlling capacity :ref:`trainmlp_en`
+
+* Auto-Encoders
+
+  * Survery on auto-encoders: section 4.6 of `Learning Deep Architectures for AI <http://www.iro.umontreal.ca/%7Elisa/publications2/index.php/publications/show/239>`_
+  * `Denoising auto-encoders tutorial <http://deeplearning.net/tutorial/SdA.html>`_
+
+January 23rd
+------------
+* :ref:`mlp_en`
+
+  * :ref:`backprop_en`
+  * :ref:`logreg_en`
+  * :ref:`trainmlp_en`
+
+* Introduction to the Deep Learning Tutorials (using Theano) <http://deeplearning.net/tutorial/intro.html>`_
+
+January 19th
+------------
+* :ref:`mlp_en`
+
+  * :ref:`mln_en`
+  * :ref:`loss_en`
+
+* Introduction to `Theano <http://www.iro.umontreal.ca/~lisa/deep/theanodoc/>`_
+* Introduction to the Deep Learning Tutorials (using Theano) <http://deeplearning.net/tutorial/intro.html>`_
+
+January 16th
+------------
+* :ref:`gradient_en`
+
+  * :ref:`flowgraph_en`
+
+
+January 12th
+------------
+* :ref:`Introduction to deep learning <deepintro_en>`
+
+  * :ref:`breakthrough_en`
+
+* :ref:`gradient_en`
+
+  * :ref:`grad_en`
+  * :ref:`gd_en`
+  * :ref:`sgd_en`
+
+
+January 9th
+-----------
+
+* :ref:`deepintro_en`
+
+January 5th
+-----------
+
+* Introduction and motivation of the course as well as evaluation methodology (`course outlie <http://www.iro.umontreal.ca/~pift6266/H12/plan_H12.pdf>`_)
+
+* :ref:`mlintro_en`
+
