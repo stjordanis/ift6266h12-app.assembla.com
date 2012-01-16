@@ -4,7 +4,6 @@ SETS="avicenna harry rita sylvester terry"
 URL="http://www.causality.inf.ethz.ch/unsupervised-learning.php?page=leaderboard&model="
 
 SAVE_DIR=/data/lisa/data/UTLC/results
-SAVE_DIR=/u/pascanur/repos
 DATE=`date +%m-%d-%k-%M`
 PID_FILE=$SAVE_DIR/getresults.pid
 
