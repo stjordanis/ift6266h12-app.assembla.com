@@ -135,4 +135,4 @@ if __name__ == "__main__":
                  options.max_point_num,
                  options.debug)
     print 'Score :', rval, \
-            ' Computed in %5.2 min' % ((time.clock - start) / 60.)
+            ' Computed in %5.2f min' % ((time.clock() - start) / 60.)
