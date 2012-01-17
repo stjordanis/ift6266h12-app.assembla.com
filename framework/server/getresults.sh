@@ -7,6 +7,12 @@ SAVE_DIR=/data/lisa/data/UTLC/results
 DATE=`date +%m-%d-%k-%M`
 PID_FILE=$SAVE_DIR/getresults.pid
 
+echo "This script collects the scores on the leaderboard for the UTLC challenge"
+echo "The results will be stored in $SAVE_DIR"
+echo ""
+echo ""
+echo ""
+
 if [ -e $PID_FILE ]; then
     echo "pidfile $PID_FILE exists"
     echo "the script is either running or had a unclean exit"
