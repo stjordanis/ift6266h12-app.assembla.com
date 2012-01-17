@@ -17,6 +17,7 @@ import time
 import optparse
 from utils.make_learning_curve import make_learning_curve
 from utils.alc import alc
+import ift6266h12
 
 
 def score(dataset,
@@ -67,7 +68,8 @@ This program evaluatest FEAT as features for dataset DATASET."""
     parser.add_option('--features',
                       dest='feat',
                       default=None,
-                      help=('Numpy ndarray (saved as npy) file '
+                      help=('npy file (saved using '
+                            'numpy.save)'
                             'containing the features'))
     parser.add_option('--dataset',
                       dest='dataset',
