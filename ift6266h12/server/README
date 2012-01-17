@@ -1,0 +1,21 @@
+contact : pascanur [at] iro [dot] umontreal [dot] ca
+
+Description
+-----------
+
+Scripts for helping to simulate the UTLC server in order to obtain
+validation scores.
+
+Usage
+-----
+
+For `evaluate.py` see:
+    >  ./evaluate.py -h
+
+For `getresults.sh` see:
+    Automatically collects results for the Leaderboard of the UTLC
+    challenge. 
+    Call as :`> ./getresults.sh`.
+    Edit the file to change options.
+
+
