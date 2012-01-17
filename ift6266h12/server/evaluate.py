@@ -104,15 +104,20 @@ This program evaluatest FEAT as features for dataset DATASET."""
 if __name__ == "__main__":
     (options, args) = process_options()
 
-    data = numpy.load(options.feat)
+    data = ift6266h12.load_npy(options.feat)
 
     label_files = {}
-    label_files['avicenna'] = '/data/lisa/data/UTLC/..'
-    label_files['harry'] = '/data/lisa/data/UTLC/..'
-    label_files['rita'] = '/data/lisa/data/UTLC/..'
-    label_files['sylvester'] = '/data/lisa/data/UTLC/..'
-    label_files['terry'] = '/data/lisa/data/UTLC/..'
-    label_data = numpy.load(label_files[options.dataset])
+    label_files['avicenna'] = \
+        '/data/lisa/data/UTLC/numpy_data/avicenna_valid_y.npy'
+    label_files['harry'] = \
+        '/data/lisa/data/UTLC/numpy_data/harry_valid_y.npy'
+    label_files['rita'] = \
+        '/data/lisa/data/UTLC/numpy_data/rita_valid_y.npy'
+    label_files['sylvester'] = \
+        '/data/lisa/data/UTLC/numpy_data/sylvester_valid_y.npy'
+    label_files['terry'] = \
+        '/data/lisa/data/UTLC/numpy_data/terry_valid_y.npy'
+    label_data = ift6266h12.load_npy(label_files[options.dataset])
 
     start = time.clock()
     print '.. computing score'
