@@ -15,6 +15,7 @@ Original script from last year ift6266 repo
 import numpy
 import time
 import optparse
+import sys
 from utils.make_learning_curve import make_learning_curve
 from utils.alc import alc
 import ift6266h12
@@ -57,7 +58,7 @@ def score(dataset,
     return alc(x, y)
 
 
-def process_options():
+def get_parser():
     usage = """\
 %prog --features=FEAT --dataset=DATASET [options]
 
@@ -99,11 +100,14 @@ This program evaluatest FEAT as features for dataset DATASET."""
                       default=False,
                       action='store_true',
                       help=('Debug messages'))
-    return parser.parse_args()
+    return parser
 
 if __name__ == "__main__":
-    (options, args) = process_options()
-
+    parser = get_parser()
+    (options, args) = parser.parse_args()
+    if options.feat is None:
+        parser.print_help()
+        sys.exit(0)
     data = ift6266h12.load_npy(options.feat)
 
     label_files = {}
