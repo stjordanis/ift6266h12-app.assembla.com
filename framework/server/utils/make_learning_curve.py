@@ -13,7 +13,7 @@ import time
 from scipy import io
 
 current_path = os.path.abspath(__file__)
-rp_path = os.path.dirname(current_path) + "/RandomPerm.mat"
+rp_path = "/data/lisa/data/UTLC/RandomPerm.mat"
 
 
 def list_idx(mat, row_list, col_list):
