@@ -368,7 +368,7 @@ quadratique, on doit s'assurer que les sorties désirées
    et les SVMs, mais en pénalisant les écarts à la surface de décision au-delà d'une
    marge). Dans le cas multiclasse, ça donne
 
-   .. math:
+   .. math::
         \sum_i (-1^{1_{y=i}}f_i(x) + 1)_+,
 
    où :math:`x_+ = x 1_{x>0}` est la *partie positive*
