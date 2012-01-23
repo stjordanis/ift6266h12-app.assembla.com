@@ -73,6 +73,8 @@ class="yui3-js-enabled" id="yui_3_2_0_1_1326674808791714">
                             pass
                 page_txt = str(lsoup)
                 for k, v in replace.items():
+                    nw_key = str(k) +"&amp;redirect=1"
+                    page_txt = page_txt.replace(nw_key, str(v))
                     page_txt = page_txt.replace(str(k), str(v))
                 print >>outfile, page_txt
     outfile.close()
