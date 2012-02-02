@@ -27,9 +27,9 @@ Date                Sujets                  À lire en priorité
 `2 février`_        Modèles probabilistes,  Intro aux :ref:`deepgm_fr`.
                     Lancer de jobs au LISA  
                                             `Jobman <http://www.assembla.com/wiki/show/ift6266h11/Jobman_au_DIRO>`_.
-`30 janvier`_       Modèles probabilistes   Intro aux :ref:`deepgm_fr`.
-`26 janvier`_       Auto-encodeurs,         Section 4.6 de `Learning Deep Architectures for AI <http://www.iro.umontreal.ca/%7Elisa/publications2/index.php/publications/show/239>`_.
-                    DAE                     `Denoising Auto-Encoders <http://www.iro.umontreal.ca/~lisa/publications2/index.php/publications/show/217>`_
+`30 janvier`_       DAE                     `Denoising Auto-Encoders <http://www.iro.umontreal.ca/~lisa/publications2/index.php/publications/show/217>`_
+
+`26 janvier`_       Auto-encodeurs          Section 4.6 de `Learning Deep Architectures for AI <http://www.iro.umontreal.ca/%7Elisa/publications2/index.php/publications/show/239>`_.
 `23 janvier`_       python, numpy, Theano   Documentation sur `python <http://www.python.org/>`_,
                                             `numpy <http://numpy.scipy.org/>`_, et `Theano <http://www.iro.umontreal.ca/~lisa/deep/theanodoc/>`_.
                     Régression logistique   Exemple avec la `Régression logistique <http://deeplearning.net/tutorial/logreg.html>`_.
@@ -115,11 +115,12 @@ Date                Sujets                  À lire en priorité
 2 Février
 ---------
 
-*  Suite de l'intro aux :ref:`deepgm_fr`.
+*  Intro aux :ref:`deepgm_fr`.
 
 30 Janvier
 ----------
 
+* `Tutorial sur les auto-encodeurs débruitants <http://deeplearning.net/tutorial/SdA.html>`_
 *  Intro aux :ref:`deepgm_fr`.
 
 26 Janvier
@@ -132,7 +133,6 @@ Date                Sujets                  À lire en priorité
 * Auto-encodeurs
 
   * Survol des auto-encodeurs: section 4.6 de `Learning Deep Architectures for AI <http://www.iro.umontreal.ca/%7Elisa/publications2/index.php/publications/show/239>`_
-  * `Tutorial sur les auto-encodeurs débruitants <http://deeplearning.net/tutorial/SdA.html>`_
 
 23 Janvier
 ----------
