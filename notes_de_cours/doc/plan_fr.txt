@@ -115,13 +115,13 @@ Date                Sujets                  À lire en priorité
 2 Février
 ---------
 
+* `Tutorial sur les auto-encodeurs débruitants <http://deeplearning.net/tutorial/SdA.html>`_
 *  Intro aux :ref:`deepgm_fr`.
 
 30 Janvier
 ----------
 
-* `Tutorial sur les auto-encodeurs débruitants <http://deeplearning.net/tutorial/SdA.html>`_
-*  Intro aux :ref:`deepgm_fr`.
+* Auto-encodeurs
 
 26 Janvier
 ----------
