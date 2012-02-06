@@ -1,8 +1,9 @@
 """
 Input/Output functionality
 """
+import theano
 import numpy
-
+import os
 
 def load_npy(path):
     """
@@ -57,7 +58,7 @@ def load_train_input(dataset,
                        'terry']
     fname = os.path.join('/data/lisa/data/UTLC/numpy_data/', dataset +
                          '_train_x.npy')
-    data = ift6266h12.load_npy(fname)
+    data = load_npy(fname)
     if normalize or normalize_on_the_fly:
         if normalize_on_the_fly:
             # Shared variables of the original type
@@ -102,7 +103,7 @@ def load_train_labels(dataset):
                        'terry']
     fname = os.path.join('/data/lisa/data/UTLC/numpy_data/', dataset +
                          '_train_y.npy')
-    data = ift6266h12.load_npy(fname)
+    data = load_npy(fname)
     return data
 
 
@@ -150,7 +151,7 @@ def load_valid_input(dataset,
                        'terry']
     fname = os.path.join('/data/lisa/data/UTLC/numpy_data/',
                          dataset + '_valid_x.npy')
-    data = ift6266h12.load_npy(fname)
+    data = load_npy(fname)
     if randomize:
         rng = numpy.random.RandomState([1, 2, 3, 4])
         perm = rng.permutation(data.shape[0])
@@ -234,7 +235,7 @@ def load_test_input(dataset,
                        'terry']
     fname = os.path.join('/data/lisa/data/UTLC/numpy_data/',
                          dataset + '_test_x.npy')
-    data = ift6266h12.load_npy(fname)
+    data = load_npy(fname)
     if randomize:
         rng = numpy.random.RandomState([1, 2, 3, 4])
         perm = rng.permutation(data.shape[0])
