@@ -1,3 +1,5 @@
+by Li Yao
+
 winning entry for terry.
 
 pipeline works as following:
@@ -16,4 +18,8 @@ setup.
 To run the job on the best hyper-params, just execute "./run_cpu.sh"
 
 The step 3 is done saparately with the script "postprocess.py" which does a pca. 
- 
+
+The experiment will generate about 6400M data in your disk! 
+
+Todo:
+Fit this into pylearn2 framework. 
