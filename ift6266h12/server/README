@@ -10,7 +10,7 @@ Usage
 -----
 
 For `evaluate.py` see:
-    >  ./evaluate.py -h
+    > python evaluate.py -h
 
 For `getresults.sh` see:
     Automatically collects results for the Leaderboard of the UTLC
