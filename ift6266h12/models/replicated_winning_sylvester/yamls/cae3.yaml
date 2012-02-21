@@ -2,7 +2,7 @@
 # This scripts learn the first layer
 !obj:pylearn2.scripts.train.Train {
     "dataset": !obj:pylearn2.datasets.npy_npz.NpyDataset &dataset {
-        "file" : '/tmp/SylvesterData/sylvester_train_pca8.npy' # Should be an N x 300 matrix on disk.
+        "file" : "layers/npy/sylvester_train_pca8.npy" # Should be an N x 300 matrix on disk.
     },
     "model": !obj:pylearn2.autoencoder.ContractiveAutoencoder {
         "nvis" : 8,
@@ -26,6 +26,6 @@
             "max_epochs": 2,
         },
     },
-    "save_path": "layer2.pkl",
+    "save_path": "layers/pkl/layer2.pkl",
     "save_freq": 1
 }

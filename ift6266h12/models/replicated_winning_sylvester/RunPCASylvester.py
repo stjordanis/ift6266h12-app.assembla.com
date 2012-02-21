@@ -4,10 +4,7 @@ from ift6266h12.utils.ift6266h12_io import load_valid_input
 from ift6266h12.utils.ift6266h12_io import load_test_input
 from sklearn.decomposition import PCA
 
-# Data output location
-strOutPath = "/tmp/SylvesterData/"
-
-def RunNormalPCA():
+def run_standard_PCA(strOutPath):
     '''
     This function calculate the first 8 principle components for sylvester dataset
     The number 8 is chosen because it gave the best results for the competition
@@ -41,7 +38,7 @@ def RunNormalPCA():
     numpy.save(strOutPath + "sylvester_test_pca8.npy", pca.transform(data))
 
 
-def RunTransductivePCA():
+def run_transductive_PCA(strOutPath):
     '''
     This is a normal PCA but it is applied on test data. These components will be used as the last layer for phase 1.
     The main idea  to use these components lies beyond the fact that there are new labels in test data that do not exist in training data.

@@ -1,9 +1,9 @@
 !obj:pylearn2.scripts.train.FeatureDump {
     "encoder": !obj:pylearn2.utils.serial.load {
-                "filepath": "layer2.pkl"},
+                "filepath": "layers/pkl/layer2.pkl"},
     "dataset": !obj:pylearn2.datasets.npy_npz.NpyDataset &dataset {
-        "file" : '/tmp/SylvesterData/sylvester_train_pca8.npy' # Should be an N x 300 matrix on disk.
+        "file" : "layers/npy/sylvester_train_pca8.npy" # Should be an N x 300 matrix on disk.
     },
-    "path": "layer2.npy"
+    "path": "layers/npy/layer2.npy"
 }
 
