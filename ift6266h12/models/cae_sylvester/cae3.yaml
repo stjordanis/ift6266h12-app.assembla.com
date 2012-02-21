@@ -6,7 +6,7 @@
     },
     "model": !obj:pylearn2.autoencoder.ContractiveAutoencoder {
         "nvis" : 100,
-        "nhid" : 80,
+        "nhid" : 60,
         "irange" : 0.05,
         "act_enc": "sigmoid", #for some reason only sigmoid function works
         "act_dec": "sigmoid",    
