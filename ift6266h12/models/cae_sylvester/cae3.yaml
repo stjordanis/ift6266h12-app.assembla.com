@@ -2,11 +2,11 @@
 # This scripts learn the first layer
 !obj:pylearn2.scripts.train.Train {
     "dataset": !obj:pylearn2.datasets.npy_npz.NpyDataset &dataset {
-        "file" : '/data/lisa/data/UTLC/numpy_data/sylvester_train_x.npy' # Should be an N x 300 matrix on disk.
+        "file" : '/tmp/SylvesterData/sylvester_train_pca8.npy' # Should be an N x 300 matrix on disk.
     },
     "model": !obj:pylearn2.autoencoder.ContractiveAutoencoder {
-        "nvis" : 100,
-        "nhid" : 60,
+        "nvis" : 8,
+        "nhid" : 6,
         "irange" : 0.05,
         "act_enc": "sigmoid", #for some reason only sigmoid function works
         "act_dec": "sigmoid",    
