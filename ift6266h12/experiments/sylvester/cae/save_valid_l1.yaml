@@ -1,0 +1,11 @@
+# save features of layer1 on validation set
+
+!obj:pylearn2.scripts.train.FeatureDump {
+    "encoder": !obj:pylearn2.utils.serial.load {
+                "filepath": "layer1.pkl"},
+    "dataset": !obj:pylearn2.datasets.npy_npz.NpyDataset &dataset {
+        "file" : '/data/lisa/data/UTLC/pca/sylvester_valid_x_pca32.npy'
+    },
+    "path": "valid_l1.npy"
+}
+
