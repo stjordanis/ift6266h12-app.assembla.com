@@ -1,0 +1,28 @@
+# This script loads layer1 representations as input and learns layer2
+!obj:pylearn2.scripts.train.Train {
+    "dataset": !obj:pylearn2.datasets.npy_npz.NpyDataset &pp {
+        "file" : 'layer1.npy'
+    },
+    "model": !obj:pylearn2.autoencoder.DenoisingAutoencoder {
+        "nvis" : 400,
+        "nhid" : 500,
+        "irange" : 0.05,
+        "corruptor": !obj:pylearn2.corruption.BinomialCorruptor {
+            "corruption_level": 0.5,
+        },
+        "act_enc": "tanh",
+        "act_dec": null,    # Linear activation on the decoder side.
+    },
+    "algorithm": !obj:pylearn2.training_algorithms.sgd.UnsupervisedExhaustiveSGD {
+        "learning_rate" : 1e-3,
+        "batch_size" : 10,
+        "monitoring_batches" : 5,
+        "monitoring_dataset" : *pp,
+        "cost" : [!obj:pylearn2.costs.autoencoder.MeanSquaredReconstructionError {}],
+        "termination_criterion" : !obj:pylearn2.training_algorithms.sgd.EpochCounter {
+            "max_epochs": 2,
+        },
+    },
+    "save_path": "layer2.pkl",
+    "save_freq": 1
+}
