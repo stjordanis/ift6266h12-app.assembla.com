@@ -18,6 +18,7 @@ import optparse
 import sys
 from utils.make_learning_curve import make_learning_curve
 from utils.alc import alc
+import ift6266h12.utils.ift6266h12_io as ift6266h12
 
 
 def score(dataset,

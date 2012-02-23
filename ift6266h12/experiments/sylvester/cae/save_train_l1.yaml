@@ -1,0 +1,11 @@
+# Save first layer features on train data
+
+!obj:pylearn2.scripts.train.FeatureDump {
+    "encoder": !obj:pylearn2.utils.serial.load {
+                "filepath": "layer1.pkl"},
+    "dataset": !obj:pylearn2.datasets.npy_npz.NpyDataset &dataset {
+        "file" : '/data/lisa/data/UTLC/pca/sylvester_train_x_pca32.npy'
+    },
+    "path": "train_l1.npy"
+}
+

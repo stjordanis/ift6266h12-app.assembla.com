@@ -1,0 +1,16 @@
+The order to execute:
+
+train.py train_l1.yaml              # Train layer1 using train data
+train.py save_train_l1.yaml         # Save layer1 features of train data
+train.py train_l2.yaml              # Train layer2 features using train data
+train.py save_valid_l1.yaml         # Save layer1 features of valid data
+train.py save_valid_l2.yaml         # Save layer2 features of valid data
+
+# evaluate the results
+./ift6266h12/server/evaluate.py --features=ift6266h12/experiments/sylvester/cae/valid_l2.npy --dataset=sylvester
+
+
+
+NOTE:
+
+There are two ways to avoid these cumbersome running of each stage manually. First is to put all stages in a bash script to run them all in sequence. Second solution is to not use pylearn2 train.py and yaml files, and write a python script manually. I will try to write equivalent python manual python script as well.
