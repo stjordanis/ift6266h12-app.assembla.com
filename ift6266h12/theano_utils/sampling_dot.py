@@ -27,6 +27,72 @@ from theano.sparse.basic import *
 
 _dot = theano.sparse.basic.Dot()
 
+_mtype_to_str = {scipy.sparse.csc_matrix: "csc",
+                 scipy.sparse.csr_matrix: "csr"}
+
+
+def _is_sparse_variable(x):
+    """
+    @rtype: boolean
+    @return: True iff x is a L{SparseVariable} (and not a L{tensor.TensorType})
+    """
+    if not isinstance(x.type, (SparseType, tensor.TensorType)):
+        raise NotImplementedError("this function should only be called on "
+                                  "*variables* (of type sparse.SparseType "
+                                  "or tensor.TensorType), not,", x)
+    return isinstance(x.type, SparseType)
+
+
+def _is_dense_variable(x):
+    """
+    @rtype: boolean
+    @return: True unless x is a L{SparseVariable} (and not a
+    L{tensor.TensorType})
+    """
+    if not isinstance(x.type, (SparseType, tensor.TensorType)):
+        raise NotImplementedError("this function should only be called on "
+                                  "*variables* (of type sparse.SparseType or "
+                                  "tensor.TensorType), not,", x)
+    return isinstance(x.type, tensor.TensorType)
+
+
+def _is_sparse(x):
+    """
+    @rtype: boolean
+    @return: True iff x is a L{scipy.sparse.spmatrix} (and not a
+    L{numpy.ndarray})
+    """
+    if not isinstance(x, (scipy.sparse.spmatrix, numpy.ndarray)):
+        raise NotImplementedError("this function should only be called on "
+                                  "sparse.scipy.sparse.spmatrix or "
+                                  "numpy.ndarray, not,", x)
+    return isinstance(x, scipy.sparse.spmatrix)
+
+
+def _is_dense(x):
+    """
+    @rtype: boolean
+    @return: True unless x is a L{scipy.sparse.spmatrix} (and not a
+    L{numpy.ndarray})
+    """
+    if not isinstance(x, (scipy.sparse.spmatrix, numpy.ndarray)):
+        raise NotImplementedError("this function should only be called on "
+                                  "sparse.scipy.sparse.spmatrix or "
+                                  "numpy.ndarray, not,", x)
+    return isinstance(x, numpy.ndarray)
+
+
+def _kmap_eq(a, b):
+    if a is None and b is None:
+        return True
+    return numpy.all(a == b)
+
+
+def _kmap_hash(a):
+    if a is None:
+        return 12345
+    return hash(numpy.str(a))
+
 class SamplingDot(gof.op.Op):
     """
     Operand for calculating the dot product DOT(X, Y) = Z when you only want
