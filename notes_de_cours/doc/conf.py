@@ -42,7 +42,7 @@ source_suffix = '.txt'
 master_doc = 'contents'
 
 # General substitutions.
-#project = 'Cours IFT6266 H11'
+#project = 'Cours IFT6266 H12'
 copyright = 'Yoshua Bengio'
 
 # The default replacements for |version| and |release|, also used in various
@@ -165,7 +165,7 @@ latex_font_size = '11pt'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, document class [howto/manual]).
 latex_documents = [
-  ('contents', 'ift6266H11.tex', 'Notes de cours IFT6266 H11',
+  ('contents', 'ift6266H11.tex', 'Notes de cours IFT6266 H12',
    'Universit\\\'e de Montr\\\'eal, DIRO', 'manual'),
 ]
 
