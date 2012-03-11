@@ -16,19 +16,23 @@ Date                Sujets                  À lire en priorité
 
                                             `Tutoriel sur les réseaux à convolution <http://deeplearning.net/tutorial/lenet.html>`_.
 `22 mars`_          Gradient profond.       fin de `Présentation de Yoshua Bengio <http://www.iro.umontreal.ca/~bengioy/ift6266/old/UofA_27_05_2010.pdf>`_.
-                    DAE vs AE               :ref:`dae_fr`.
+
+                    DAE vs AE               
+                                            :ref:`dae_fr`.
 `19 mars`_          Défi de la profondeur   :ref:`deepchallenge_fr`.
 `15 mars`_          Pré-entraînement        `Présentation de Dumitru Erhan <http://www.iro.umontreal.ca/~bengioy/ift6266/old/dumitru_erhan.pdf>`_.
-                    Pré-entraînement        `Présentation de Yoshua Bengio <http://www.iro.umontreal.ca/~bengioy/ift6266/old/UofA_27_05_2010.pdf>`_.
-`12 mars`_          Contracting AE et MTC    Article sur les `Contracting Auto-Encoders <http://www.iro.umontreal.ca/~lisa/pointeurs/ICML2011_explicit_invariance.pdf>`_ et le `Manifold Tangent Classifier <http://books.nips.cc/papers/files/nips24/NIPS2011_1240.pdf>`_
-`1 mars`_           Contracting AE,         Article sur les `Contracting Auto-Encoders <https://studium.umontreal.ca/mod/url/view.php?id=146505>`_.
-`27 février`_       DBMs,                   :ref:`dbm_fr`.
+
+                                            `Présentation de Yoshua Bengio <http://www.iro.umontreal.ca/~bengioy/ift6266/old/UofA_27_05_2010.pdf>`_.
+`12 mars`_          Contracting AE et MTC   Article sur les `Contracting Auto-Encoders <http://www.iro.umontreal.ca/~lisa/pointeurs/ICML2011_explicit_invariance.pdf>`_ 
+                                            et le `Manifold Tangent Classifier <http://books.nips.cc/papers/files/nips24/NIPS2011_1240.pdf>`_
+`1 mars`_           Contracting AE          Article sur les `Contracting Auto-Encoders <http://www.iro.umontreal.ca/~lisa/pointeurs/ICML2011_explicit_invariance.pdf>`_
+`27 février`_       DBMs                    :ref:`dbm_fr`.
 `20+23 février`_    DBNs                    :ref:`dbn_fr`.
 `13+16 février`_    RBMs                    :ref:`rbm_fr`.
 `6+9 février`_      Modèles probabilistes   :ref:`deepgm_fr`.
 `2 février`_        Modèles probabilistes,  Intro aux :ref:`deepgm_fr`.
-                    Lancer de jobs au LISA  
-                                            `Jobman <http://www.assembla.com/wiki/show/ift6266h11/Jobman_au_DIRO>`_.
+
+                    Lancer de jobs au LISA  `Jobman <http://www.assembla.com/wiki/show/ift6266h11/Jobman_au_DIRO>`_.
 `30 janvier`_       DAE                     `Denoising Auto-Encoders <http://www.iro.umontreal.ca/~lisa/publications2/index.php/publications/show/217>`_
 
 `26 janvier`_       Auto-encodeurs          Section 4.6 de `Learning Deep Architectures for AI <http://www.iro.umontreal.ca/%7Elisa/publications2/index.php/publications/show/239>`_.
@@ -93,11 +97,15 @@ Date                Sujets                  À lire en priorité
 12 Mars
 -------
 
-* Articles sur les `Contracting Auto-Encoders <http://www.iro.umontreal.ca/~lisa/pointeurs/ICML2011_explicit_invariance.pdf>`_ et le `Manifold Tangent Classifier <http://www.iro.umontreal.ca/~lisa/pointeurs/ICML2011_explicit_invariance.pdf>`_
+* Articles sur les `Contracting Auto-Encoders <http://www.iro.umontreal.ca/~lisa/pointeurs/ICML2011_explicit_invariance.pdf>`_ et le `Manifold Tangent Classifier <http://books.nips.cc/papers/files/nips24/NIPS2011_1240.pdf>`_
 
 1 Mars
 ------
 
+* Article sur les `Contracting Auto-Encoders <http://www.iro.umontreal.ca/~lisa/pointeurs/ICML2011_explicit_invariance.pdf>`_.
+
+27 Février
+-------------
 * :ref:`dbm_fr`.
 
 20+23 Février

@@ -14,21 +14,26 @@ Date                   Subject                              To read
 `March 26th`_          Convolutional networks               `Neocognitron <http://www.scholarpedia.org/article/Neocognitron>`_ article.
  
                                                             `LeNet <http://yann.lecun.com/exdb/publis/pdf/lecun-89e.pdf>`_ article.
+
                                                             `Convolutional networks tutorial <http://deeplearning.net/tutorial/lenet.html>`_.
-`March 22nd`_          Gradient propagation for deep nets.  final part of `Yoshua Bengio's presentation <http://www.iro.umontreal.ca/~bengioy/ift6266/old/UofA_27_05_2010.pdf>`_.
-                       DAE vs AE                            :ref:`dae_en`.
+`March 22nd`_          Gradient propagation                 final part of `Yoshua Bengio's presentation <http://www.iro.umontreal.ca/~bengioy/ift6266/old/UofA_27_05_2010.pdf>`_.
+
+                       DAE vs AE                            
+                                                            :ref:`dae_en`.
 `March 19th`_          Challenges for deep networks         :ref:`deepchallenge_en`.
 `March 15th`_          Pre-training                         `Yoshua Bengio's presentation <http://www.iro.umontreal.ca/~bengioy/ift6266/old/UofA_27_05_2010.pdf>`_.
+
                                                             `Dumitru Erhan presentation <http://www.iro.umontreal.ca/~bengioy/ift6266/old/dumitru_erhan.pdf>`_.
-`March 12th`_          Contracting AE and MTC               Articles on `Contracting Auto-Encoders <http://www.iro.umontreal.ca/~lisa/pointeurs/ICML2011_explicit_invariance.pdf>`_ and on `Manifold Tangent Classifier <http://books.nips.cc/papers/files/nips24/NIPS2011_1240.pdf>`_
-`March 1st`_           Contracting AE,                      Article on `Contracting Auto-Encoders <http://www.iro.umontreal.ca/~lisa/pointeurs/ICML2011_explicit_invariance.pdf>
+`March 12th`_          Contracting AE and MTC               Articles on `Contracting Auto-Encoders <http://www.iro.umontreal.ca/~lisa/pointeurs/ICML2011_explicit_invariance.pdf>`_ 
+                                                            and on `Manifold Tangent Classifier <http://books.nips.cc/papers/files/nips24/NIPS2011_1240.pdf>`_
+`March 1st`_           Contracting AE,                      Article on `Contracting Auto-Encoders <http://www.iro.umontreal.ca/~lisa/pointeurs/ICML2011_explicit_invariance.pdf>`_
 `February 27th`_       DBMs                                 :ref:`dbm_en`.
 `February 20th+23rd`_  DBNs                                 :ref:`dbn_en`.
 `February 13rd+16th`_  RBMs                                 :ref:`rbm_en`.
 `February 6th+9th`_    Probabilistic models                 Probabilistic models :ref:`deepgm_en`.
 `February 2nd`_        Probabilistic models                 Introduction to :ref:`deepgm_en`.
-                       Launching jobs 
-                                                            `Jobman <http://www.assembla.com/wiki/show/ift6266h11/Jobman_au_DIRO>`_.
+
+                       Launching jobs                       `Jobman <http://www.assembla.com/wiki/show/ift6266h11/Jobman_au_DIRO>`_.
 `January 30th`_        Probabilistic models                 Introduction to :ref:`deepgm_en`.
 `January 26th`_        Auto-encoders,                       Section 4.6 de `Learning Deep Architectures for AI <http://www.iro.umontreal.ca/%7Elisa/publications2/index.php/publications/show/239>`_.
                        DAE                                  `Denoising Auto-Encoders <http://www.iro.umontreal.ca/~lisa/publications2/index.php/publications/show/217>`_
@@ -81,23 +86,29 @@ March 22nd
 March 19th
 ----------
 
-* Understanding the effects of non-supervised pre-training: `Yoshua Bengio's presentation, May 2010 <http://www.iro.umontreal.ca/~bengioy/ift6266/UofA_27_05_2010.pdf>`_.
 * :ref:`deepchallenge_en`.
 
 March 15th
 ----------
 
 * Understanding the effects of non-supervised pre-training: `Yoshua Bengio's presentation, May 2010 <http://www.iro.umontreal.ca/~bengioy/ift6266/UofA_27_05_2010.pdf>`_.
+* Understanding the effects of non-supervised pre-training: `Dumitru Erhan's presentation, March 2010 <http://www.iro.umontreal.ca/~bengioy/ift6266/dumitru_erhan.pdf>`_. 
 
-March 12nd
+March 12th
 ----------
 
-* Understanding the effects of non-supervised pre-training: `Dumitru Erhan's presentation, March 2010 <http://www.iro.umontreal.ca/~bengioy/ift6266/dumitru_erhan.pdf>`_. 
+* Articles on `Contracting Auto-Encoders <http://www.iro.umontreal.ca/~lisa/pointeurs/ICML2011_explicit_invariance.pdf>`_ and on `Manifold Tangent Classifier <http://books.nips.cc/papers/files/nips24/NIPS2011_1240.pdf>`_
 
 March 1st
 ---------
 
-* :ref:`dbm_en`.
+* Article on `Contracting Auto-Encoders <http://www.iro.umontreal.ca/~lisa/pointeurs/ICML2011_explicit_invariance.pdf>`_.
+
+
+February 27th
+-------------
+
+*  :ref:`dbm_en`.
 
 February 20th+23rd
 ------------------
