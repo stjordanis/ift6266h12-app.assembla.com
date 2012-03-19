@@ -1,0 +1,16 @@
+Hyper-parameters kindly provided by Xavier.
+
+TERRY -----------------------------------------------------------------------
+
+ act  | batchsize |  con  |           epochs            |                             featsub                              |  lr  | N | nepochs | new | nhid | ninp  | ninputs | ones | pattern  | ratio | regcoef | savespec | scaling | seed | trans | zeros
+------+-----------+-------+-----------------------------+------------------------------------------------------------------+------+---+---------+-----+------+-------+---------+------+----------+-------+---------+----------+---------+------+-------+-------
+ rect |        10 | white | [5, 10, 15, 20, 25, 30, 60] | /mnt/scratch/bengio/glorotxa/data/terry_testvalid_activefeat.npy | 0.03 | 1 |      60 |   1 | 5000 | 20963 |   20963 |    0 | inpnoise | 0.005 |  0.0001 |        1 |       0 |    1 | valid |   0.5
+
+cost='MSE'
+
+best epoch = 30
+
+Post-processing:
+transductive PCA 4 components
+
+
